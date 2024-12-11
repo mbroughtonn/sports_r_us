@@ -1,4 +1,4 @@
-product_id,product_name,description,price,stock_quantity,category,brand
+product_id,product_name,description,price,stock_quantity,category_name,brand_name
 1,Hockey Stick,Professional-grade hockey stick,99.99,20,Hockey,Easton
 2,Hockey Gloves,Padded and durable gloves,49.99,18,Hockey,Warrior
 3,Hockey Helmet,High-impact resistant helmet,79.99,15,Hockey,CCM

@@ -3,7 +3,10 @@ class Product < ApplicationRecord
   belongs_to :brand
   has_many :order_items
 
-  validates :product_name, :price, :stock_quantity, presence: true
-  validates :product_name, uniqueness: true
-  validates :stock_quantity, numericality: { greater_than_or_equal_to: 0 }
+  validates :title, presence: true
+  validates :description, presence: true
+  validates :price, presence: true
+  validates :stock_quantity, presence: true
+  validates :category, presence: true
+  validates :brand, presence: true
 end
