@@ -17,6 +17,8 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem "bcrypt"
+
 # Active Admin for Admin Dashboard
 gem 'activeadmin'
 
