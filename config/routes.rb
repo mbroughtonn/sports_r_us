@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
-  get "categories/index"
-  get "categories/show"
-  get "brands/index"
-  get "brands/show"
-  get "products/index"
-  get "products/show"
+  resources :products, only: [ :index, :show ]
+  resources :brands, only: [ :index, :show ]
+  resources :categories, only: [ :index, :show ]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
