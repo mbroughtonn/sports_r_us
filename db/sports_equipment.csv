@@ -1,11 +1,32 @@
 product_id,product_name,description,price,stock_quantity,category
 1,Hockey Stick,Professional-grade hockey stick,99.99,20,Hockey
-2,Soccer Ball,Official size 5 soccer ball,29.99,50,Soccer
-3,Basketball,Durable indoor/outdoor basketball,34.99,30,Basketball
-4,Baseball Bat,Lightweight aluminum bat,59.99,15,Baseball
-5,Running Shoes,Comfortable and lightweight,74.99,25,Fitness
-6,Winnipeg Jets Jersey,Limited-edition team jersey,129.99,10,Apparel
-7,Winnipeg Goldeyes Cap,Official team cap,24.99,40,Apparel
-8,Football Helmet,Protective helmet with padding,149.99,12,Football
-9,Yoga Mat,Non-slip exercise mat,19.99,60,Fitness
-10,Hockey Gloves,Padded and durable gloves,49.99,18,Hockey
+2,Hockey Gloves,Padded and durable gloves,49.99,18,Hockey
+3,Hockey Helmet,High-impact resistant helmet,79.99,15,Hockey
+4,Hockey Pants,Protective and flexible pants,59.99,12,Hockey
+5,Hockey Shoulder Pads,Lightweight and durable shoulder pads,89.99,10,Hockey
+6,Hockey Shin Pads,Reinforced shin guards for optimal protection,69.99,18,Hockey
+7,Hockey Skates,High-performance ice skates,249.99,10,Hockey
+8,Hockey Elbow Pads,Flexible elbow pads with enhanced cushioning,39.99,20,Hockey
+9,Hockey Bag,Spacious and durable bag for gear storage,99.99,8,Hockey
+10,Hockey Puck,Official regulation puck,4.99,100,Hockey
+11,Soccer Ball,Official size 5 soccer ball,29.99,50,Soccer
+12,Soccer Cleats,Lightweight cleats,79.99,25,Soccer
+13,Basketball,Durable indoor/outdoor basketball,34.99,30,Basketball
+14,Basketball Shoes,High-grip and comfortable basketball shoes,109.99,20,Basketball
+15,Basketball Shorts,Lightweight and breathable shorts,24.99,30,Basketball
+16,Baseball Bat,Lightweight aluminum bat,59.99,15,Baseball
+17,Baseball Cleats,Durable cleats for optimal performance,64.99,20,Baseball
+18,Baseball Helmet,Ventilated helmet with shock absorption,49.99,18,Baseball
+19,Baseball Glove,High-quality leather glove,79.99,15,Baseball
+20,Baseball,Regulation size and weight baseball,9.99,50,Baseball
+21,Football Helmet,Protective helmet with padding,149.99,12,Football
+22,Football Cleats,Lightweight and durable cleats,89.99,15,Football
+23,Football Pants,Flexible and padded pants,49.99,18,Football
+24,Football Gloves,Grip-enhancing gloves,34.99,25,Football
+25,Football Shoulder Pads,Impact-resistant shoulder pads,129.99,10,Football
+26,Football,Official regulation football,19.99,30,Football
+27,Winnipeg Jets Jersey,Limited-edition team jersey,129.99,10,Apparel
+28,Winnipeg Goldeyes Cap,Official team cap,24.99,40,Apparel
+29,Winnipeg Blue Bombers Sweater,Official team sweater,49.99,10,Apparel
+30,Running Shoes,Comfortable and lightweight,74.99,25,Fitness
+31,Yoga Mat,Non-slip exercise mat,19.99,60,Fitness
