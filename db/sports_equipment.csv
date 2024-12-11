@@ -1,101 +1,101 @@
-product_id,product_name,description,price,stock_quantity,category
-1,Hockey Stick,Professional-grade hockey stick,99.99,20,Hockey
-2,Hockey Gloves,Padded and durable gloves,49.99,18,Hockey
-3,Hockey Helmet,High-impact resistant helmet,79.99,15,Hockey
-4,Hockey Pants,Protective and flexible pants,59.99,12,Hockey
-5,Hockey Shoulder Pads,Lightweight and durable shoulder pads,89.99,10,Hockey
-6,Hockey Shin Pads,Reinforced shin guards for optimal protection,69.99,18,Hockey
-7,Hockey Skates,High-performance ice skates,249.99,10,Hockey
-8,Hockey Elbow Pads,Flexible elbow pads with enhanced cushioning,39.99,20,Hockey
-9,Hockey Bag,Spacious and durable bag for gear storage,99.99,8,Hockey
-10,Hockey Puck,Official regulation puck,4.99,100,Hockey
-11,Hockey Goal,Full-size collapsible goal,199.99,5,Hockey
-12,Hockey Tape,Durable tape for sticks (pack of 3),9.99,50,Hockey
-13,Hockey Water Bottle,Insulated bottle with straw,12.99,40,Hockey
-14,Hockey Socks,Moisture-wicking long socks,14.99,30,Hockey
-15,Hockey Coach Board,Magnetic strategy board,24.99,15,Hockey
-16,Soccer Ball,Official size 5 soccer ball,29.99,50,Soccer
-17,Soccer Cleats,Lightweight cleats,79.99,25,Soccer
-18,Soccer Shin Guards,Flexible and durable shin guards,14.99,40,Soccer
-19,Soccer Jersey,Breathable and lightweight jersey,24.99,30,Soccer
-20,Soccer Shorts,Moisture-wicking soccer shorts,19.99,30,Soccer
-21,Soccer Goal,Portable soccer goal for practice,119.99,8,Soccer
-22,Soccer Corner Flags,Set of 4 durable flags,29.99,10,Soccer
-23,Soccer Bibs,Set of 10 training bibs,49.99,15,Soccer
-24,Soccer Net,Replacement net for goals,29.99,15,Soccer
-25,Soccer Coach Board,Foldable strategy board,24.99,12,Soccer
-26,Basketball,Durable indoor/outdoor basketball,34.99,30,Basketball
-27,Basketball Shoes,High-grip and comfortable basketball shoes,109.99,20,Basketball
-28,Basketball Shorts,Lightweight and breathable shorts,24.99,30,Basketball
-29,Basketball Hoop,Adjustable outdoor basketball hoop,299.99,5,Basketball
-30,Basketball Net,Durable replacement net,12.99,50,Basketball
-31,Basketball Pump,Compact and portable ball pump,9.99,50,Basketball
-32,Basketball Headband,Moisture-wicking headband,9.99,30,Basketball
-33,Basketball Arm Sleeve,Compression sleeve,19.99,25,Basketball
-34,Basketball Chair,Collapsible sideline chair,39.99,10,Basketball
-35,Basketball Coach Board,Dry-erase strategy board,24.99,10,Basketball
-36,Baseball Bat,Lightweight aluminum bat,59.99,15,Baseball
-37,Baseball Cleats,Durable cleats for optimal performance,64.99,20,Baseball
-38,Baseball Helmet,Ventilated helmet with shock absorption,49.99,18,Baseball
-39,Baseball Glove,High-quality leather glove,79.99,15,Baseball
-40,Baseball,Regulation size and weight baseball,9.99,50,Baseball
-41,Baseball Cap,Adjustable and breathable cap,14.99,25,Baseball
-42,Baseball Scorebook,Spiral-bound scorekeeping book,14.99,25,Baseball
-43,Baseball Duffel Bag,Spacious bag for gear,39.99,20,Baseball
-44,Baseball Batting Gloves,Grip-enhancing gloves,19.99,30,Baseball
-45,Football Helmet,Protective helmet with padding,149.99,12,Football
-46,Football Cleats,Lightweight and durable cleats,89.99,15,Football
-47,Football Pants,Flexible and padded pants,49.99,18,Football
-48,Football Gloves,Grip-enhancing gloves,34.99,25,Football
-49,Football Shoulder Pads,Impact-resistant shoulder pads,129.99,10,Football
-50,Football,Official regulation football,19.99,30,Football
-51,Football Marker Cones,Set of 10 cones for drills,19.99,20,Football
-52,Football Fan Jersey,Replica fan jersey,79.99,15,Football
-53,Football Visor,Anti-glare and impact-resistant visor,39.99,10,Football
-54,Football Scoreboard,Portable digital scoreboard,399.99,2,Football
-55,Tennis Racket,Lightweight graphite racket,89.99,20,Tennis
-56,Tennis Balls,Pressurized tennis balls (pack of 3),7.99,100,Tennis
-57,Tennis Bag,Spacious bag for racket and gear storage,49.99,10,Tennis
-58,Tennis Wristbands,Absorbent wristbands (pair),7.99,30,Tennis
-59,Tennis Overgrip,Replacement overgrip (pack of 3),9.99,30,Tennis
-60,Tennis Ball Hopper,Holds up to 75 balls,29.99,10,Tennis
-61,Tennis Hat,Lightweight and adjustable hat,14.99,20,Tennis
-62,Tennis Shoes,Comfortable and durable shoes,74.99,20,Tennis
-63,Golf Club Set,Complete set with bag,399.99,5,Golf
-64,Golf Balls,Premium golf balls (pack of 12),34.99,40,Golf
-65,Golf Tees,Wooden tees (pack of 50),9.99,100,Golf
-66,Golf Gloves,Comfortable and breathable gloves (pair),19.99,15,Golf
-67,Golf Rangefinder,Precise distance-measuring device,199.99,5,Golf
-68,Golf Swing Trainer,Improves posture and technique,49.99,20,Golf
-69,Golf Polo,Moisture-wicking polo shirt,29.99,25,Golf
-70,Golf Bag Stand,Lightweight stand-alone bag,79.99,15,Golf
-71,Cycling Helmet,Aerodynamic and lightweight helmet,74.99,15,Cycling
-72,Cycling Gloves,Padded gloves for improved grip,19.99,30,Cycling
-73,Cycling Jersey,Breathable and reflective jersey,49.99,10,Cycling
-74,Cycling Lights,Front and rear rechargeable lights,39.99,20,Cycling
-75,Cycling Shoes,Clip-in cycling shoes,129.99,10,Cycling
-76,Cycling Backpack,Hydration-compatible backpack,59.99,15,Cycling
-77,Cycling Arm Warmers,Wind-resistant arm warmers,19.99,20,Cycling
-78,Cycling Repair Kit,Compact kit for bike repairs,29.99,25,Cycling
-79,Swimming Goggles,Anti-fog and UV-protected goggles,14.99,50,Swimming
-80,Swimming Cap,Silicone swim cap,9.99,60,Swimming
-81,Swimsuit (Men),Durable and chlorine-resistant swimsuit,29.99,25,Swimming
-82,Swimsuit (Women),Stylish and supportive swimsuit,39.99,20,Swimming
-83,Swim Fins,Adjustable swim fins,49.99,15,Swimming
-84,Swimming Kickboard,Lightweight and durable kickboard,14.99,30,Swimming
-85,Swim Paddles,Resistance training paddles,19.99,30,Swimming
-86,Swimming Robe,Quick-dry and absorbent robe,39.99,10,Swimming
-87,Swimming Stopwatch,Waterproof and precise stopwatch,29.99,10,Swimming
-88,Fitness Dumbbells (Pair),Adjustable dumbbells (up to 50 lbs),99.99,10,Fitness
-89,Fitness Kettlebell,Cast-iron kettlebell,49.99,15,Fitness
-90,Fitness Treadmill,High-tech treadmill with incline,999.99,3,Fitness
-91,Fitness Resistance Bands,Set of 5 resistance bands,19.99,40,Fitness
-92,Fitness Yoga Blocks,Non-slip and durable blocks (pair),14.99,25,Fitness
-93,Fitness Yoga Strap,Adjustable and durable strap,9.99,40,Fitness
-94,Fitness Tracker,Waterproof and GPS-enabled tracker,199.99,8,Fitness
-95,Fitness Ball,Anti-burst stability ball,24.99,30,Fitness
-96,Fitness Foam Roller,High-density foam roller,24.99,30,Fitness
-97,Fitness Pull-Up Bar,Door-mounted pull-up bar,29.99,25,Fitness
-98,Fitness Jump Rope,Adjustable speed rope,14.99,50,Fitness
-99,Fitness Resistance Band Door Anchor,Secures bands to doors,9.99,40,Fitness
-100,Fitness Medicine Ball,Weighted medicine ball (10 lbs),34.99,20,Fitness
+product_id,product_name,description,price,stock_quantity,category,brand
+1,Hockey Stick,Professional-grade hockey stick,99.99,20,Hockey,Easton
+2,Hockey Gloves,Padded and durable gloves,49.99,18,Hockey,Warrior
+3,Hockey Helmet,High-impact resistant helmet,79.99,15,Hockey,CCM
+4,Hockey Pants,Protective and flexible pants,59.99,12,Hockey,Bauer
+5,Hockey Shoulder Pads,Lightweight and durable shoulder pads,89.99,10,Hockey,Reebok
+6,Hockey Shin Pads,Reinforced shin guards for optimal protection,69.99,18,Hockey,True
+7,Hockey Skates,High-performance ice skates,249.99,10,Hockey,Graf
+8,Hockey Elbow Pads,Flexible elbow pads with enhanced cushioning,39.99,20,Hockey,Warrior
+9,Hockey Bag,Spacious and durable bag for gear storage,99.99,8,Hockey,Easton
+10,Hockey Puck,Official regulation puck,4.99,100,Hockey,InGlove
+11,Hockey Goal,Full-size collapsible goal,199.99,5,Hockey,Franklin
+12,Hockey Tape,Durable tape for sticks (pack of 3),9.99,50,Hockey,Apex
+13,Hockey Water Bottle,Insulated bottle with straw,12.99,40,Hockey,Nalgene
+14,Hockey Socks,Moisture-wicking long socks,14.99,30,Hockey,ShockDoctor
+15,Hockey Coach Board,Magnetic strategy board,24.99,15,Hockey,ProTrainer
+16,Soccer Ball,Official size 5 soccer ball,29.99,50,Soccer,Adidas
+17,Soccer Cleats,Lightweight cleats,79.99,25,Soccer,Nike
+18,Soccer Shin Guards,Flexible and durable shin guards,14.99,40,Soccer,Puma
+19,Soccer Jersey,Breathable and lightweight jersey,24.99,30,Soccer,Under Armour
+20,Soccer Shorts,Moisture-wicking soccer shorts,19.99,30,Soccer,Reebok
+21,Soccer Goal,Portable soccer goal for practice,119.99,8,Soccer,Franklin
+22,Soccer Corner Flags,Set of 4 durable flags,29.99,10,Soccer,Berghaus
+23,Soccer Bibs,Set of 10 training bibs,49.99,15,Soccer,Adidas
+24,Soccer Net,Replacement net for goals,29.99,15,Soccer,Mitre
+25,Soccer Coach Board,Foldable strategy board,24.99,12,Soccer,ProTrainer
+26,Basketball,Durable indoor/outdoor basketball,34.99,30,Basketball,Spalding
+27,Basketball Shoes,High-grip and comfortable basketball shoes,109.99,20,Basketball,Jordan
+28,Basketball Shorts,Lightweight and breathable shorts,24.99,30,Basketball,NIKE
+29,Basketball Hoop,Adjustable outdoor basketball hoop,299.99,5,Basketball,Goalrilla
+30,Basketball Net,Durable replacement net,12.99,50,Basketball,Spalding
+31,Basketball Pump,Compact and portable ball pump,9.99,50,Basketball,Wilson
+32,Basketball Headband,Moisture-wicking headband,9.99,30,Basketball,Adidas
+33,Basketball Arm Sleeve,Compression sleeve,19.99,25,Basketball,Under Armour
+34,Basketball Chair,Collapsible sideline chair,39.99,10,Basketball,ALPS
+35,Basketball Coach Board,Dry-erase strategy board,24.99,10,Basketball,ProTrainer
+36,Baseball Bat,Lightweight aluminum bat,59.99,15,Baseball,Easton
+37,Baseball Cleats,Durable cleats for optimal performance,64.99,20,Baseball,Nike
+38,Baseball Helmet,Ventilated helmet with shock absorption,49.99,18,Baseball,Rawlings
+39,Baseball Glove,High-quality leather glove,79.99,15,Baseball,Wilson
+40,Baseball,Regulation size and weight baseball,9.99,50,Baseball,Diamond
+41,Baseball Cap,Adjustable and breathable cap,14.99,25,Baseball,New Era
+42,Baseball Scorebook,Spiral-bound scorekeeping book,14.99,25,Baseball,Rawlings
+43,Baseball Duffel Bag,Spacious bag for gear,39.99,20,Baseball,Under Armour
+44,Baseball Batting Gloves,Grip-enhancing gloves,19.99,30,Baseball,Easton
+45,Football Helmet,Protective helmet with padding,149.99,12,Football,Riddell
+46,Football Cleats,Lightweight and durable cleats,89.99,15,Football,Adidas
+47,Football Pants,Flexible and padded pants,49.99,18,Football,Nike
+48,Football Gloves,Grip-enhancing gloves,34.99,25,Football,Under Armour
+49,Football Shoulder Pads,Impact-resistant shoulder pads,129.99,10,Football,Riddell
+50,Football,Official regulation football,19.99,30,Football,Wilson
+51,Football Marker Cones,Set of 10 cones for drills,19.99,20,Football,SKLZ
+52,Football Fan Jersey,Replica fan jersey,79.99,15,Football,Reebok
+53,Football Visor,Anti-glare and impact-resistant visor,39.99,10,Football,Oakley
+54,Football Scoreboard,Portable digital scoreboard,399.99,2,Football,Spalding
+55,Tennis Racket,Lightweight graphite racket,89.99,20,Tennis,Wilson
+56,Tennis Balls,Pressurized tennis balls (pack of 3),7.99,100,Tennis,Wilson
+57,Tennis Bag,Spacious bag for racket and gear storage,49.99,10,Tennis,Babolat
+58,Tennis Wristbands,Absorbent wristbands (pair),7.99,30,Tennis,Adidas
+59,Tennis Overgrip,Replacement overgrip (pack of 3),9.99,30,Tennis,Wilson
+60,Tennis Ball Hopper,Holds up to 75 balls,29.99,10,Tennis,Babolat
+61,Tennis Hat,Lightweight and adjustable hat,14.99,20,Tennis,Nike
+62,Tennis Shoes,Comfortable and durable shoes,74.99,20,Tennis,Asics
+63,Golf Club Set,Complete set with bag,399.99,5,Golf,Callaway
+64,Golf Balls,Premium golf balls (pack of 12),34.99,40,Golf,Titleist
+65,Golf Tees,Wooden tees (pack of 50),9.99,100,Golf,Pinemeadow
+66,Golf Gloves,Comfortable and breathable gloves (pair),19.99,15,Golf,FootJoy
+67,Golf Rangefinder,Precise distance-measuring device,199.99,5,Golf,Nikon
+68,Golf Swing Trainer,Improves posture and technique,49.99,20,Golf,SKLZ
+69,Golf Polo,Moisture-wicking polo shirt,29.99,25,Golf,Puma
+70,Golf Bag Stand,Lightweight stand-alone bag,79.99,15,Golf,Sun Mountain
+71,Cycling Helmet,Aerodynamic and lightweight helmet,74.99,15,Cycling,Specialized
+72,Cycling Gloves,Padded gloves for improved grip,19.99,30,Cycling,Castelli
+73,Cycling Jersey,Breathable and reflective jersey,49.99,10,Cycling,Giordana
+74,Cycling Lights,Front and rear rechargeable lights,39.99,20,Cycling,Cateye
+75,Cycling Shoes,Clip-in cycling shoes,129.99,10,Cycling,Sidi
+76,Cycling Backpack,Hydration-compatible backpack,59.99,15,Cycling,Osprey
+77,Cycling Arm Warmers,Wind-resistant arm warmers,19.99,20,Cycling,Castelli
+78,Cycling Repair Kit,Compact kit for bike repairs,29.99,25,Cycling,Park Tool
+79,Swimming Goggles,Anti-fog and UV-protected goggles,14.99,50,Swimming,Speedo
+80,Swimming Cap,Silicone swim cap,9.99,60,Swimming,TYR
+81,Swimsuit (Men),Durable and chlorine-resistant swimsuit,29.99,25,Swimming,Speedo
+82,Swimsuit (Women),Stylish and supportive swimsuit,39.99,20,Swimming,TYR
+83,Swim Fins,Adjustable swim fins,49.99,15,Swimming,Finis
+84,Swimming Kickboard,Lightweight and durable kickboard,14.99,30,Swimming,Speedo
+85,Swim Paddles,Resistance training paddles,19.99,30,Swimming,Finis
+86,Swimming Robe,Quick-dry and absorbent robe,39.99,10,Swimming,TYR
+87,Swimming Stopwatch,Waterproof and precise stopwatch,29.99,10,Swimming,Speedo
+88,Fitness Dumbbells (Pair),Adjustable dumbbells (up to 50 lbs),99.99,10,Fitness,Bowflex
+89,Fitness Kettlebell,Cast-iron kettlebell,49.99,15,Fitness,CAP Barbell
+90,Fitness Treadmill,High-tech treadmill with incline,999.99,3,Fitness,NordicTrack
+91,Fitness Resistance Bands,Set of 5 resistance bands,19.99,40,Fitness,Black Mountain
+92,Fitness Yoga Blocks,Non-slip and durable blocks (pair),14.99,25,Fitness,Gaiam
+93,Fitness Yoga Strap,Adjustable and durable strap,9.99,40,Fitness,Gaiam
+94,Fitness Tracker,Waterproof and GPS-enabled fitness tracker,79.99,15,Fitness,Fitbit
+95,Fitness Mat,Non-slip and cushioned exercise mat,29.99,30,Fitness,ProSource
+96,Fitness Exercise Ball,Durable stability ball,24.99,20,Fitness,Live Infinitely
+97,Camping Tent,Portable 2-person tent,59.99,15,Camping,Core
+98,Camping Sleeping Bag,Cold weather sleeping bag,49.99,20,Camping,Coleman
+99,Camping Stove,Portable camping stove,69.99,10,Camping,Jetboil
+100,Camping Lantern,Rechargeable LED lantern,29.99,30,Camping,Goal Zero
