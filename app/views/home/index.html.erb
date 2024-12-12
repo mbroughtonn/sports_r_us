@@ -1,25 +1,31 @@
-<h1 class="title is-1">Sports R Us</h1>
+<h1 class="title is-1">Products</h1>
 
 <div class="columns">
     <div class="column">
         <h3 class="title is-5">
-            Top 10 Products
+            Top Products
         </h3>
         <ol class="ml-5">
             <% @products.each do |product| %>
             <li><%= link_to product.title, product %></li>
             <% end %>
         </ol>
+        <p class="mt-5">
+            <strong><%= link_to "👉 See All Products", products_path %></strong>
+        </p>
     </div>
 
     <div class="column">
         <h3 class="title is-5">
-            Top 10 Brands
+            Top Brands
         </h3>
         <ol class="ml-5">
             <% @brands.each do |brand| %>
             <li><%= link_to brand.name, brand %></li>
             <% end %>
         </ol>
+        <p class="mt-5">
+            <strong><%= link_to "👉 See All Brands", brands_path %></strong>
+        </p>
     </div>
 </div>
