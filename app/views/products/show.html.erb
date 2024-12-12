@@ -1,7 +1,7 @@
 <h2><%= @product.title %></h2>
 <p>
     <strong>Brand:</strong>
-    <%= @product.brand%>
+    <%= link_to @product.brand.name, @product.brand%>
 </p>
 <p>
     <strong>Description:</strong>
@@ -12,10 +12,10 @@
     <%= @product.price%>
 </p>
 <p>
-    <strong>In Stock:</strong>
+    <strong>Quantity In Stock:</strong>
     <%= @product.stock_quantity%>
 </p>
 <p>
     <strong>Category:</strong>
-    <%= @product.category%>
+    <%= link_to @product.category.name, @product.category%>
 </p>

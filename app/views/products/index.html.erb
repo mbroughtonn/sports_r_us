@@ -1,6 +1,6 @@
 <h2>Products</h2>
 <ol>
     <% @products.each do |product| %>
-    <li> <%= product.title %> </li>
+    <li> <%= link_to product.title, product %> made by <%= link_to product.brand.name, product.brand%> </li>
     <% end %>
 </ol>
