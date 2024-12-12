@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "home/index"
   resources :brands, only: [:index, :show]
   resources :categories, only: [:index, :show]
   resources :products, only: [:index, :show]
