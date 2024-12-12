@@ -1,5 +1,10 @@
-<h2>Products</h2>
-<ol>
+<% content_for(:title) { "Products" } %>
+
+<h2 class="title is-3">Products</h2>
+<p class="mb-5">
+    A list of equipment used when playing sports and/or doing activities. 
+</p>
+<ol class="ml-5">
     <% @products.each do |product| %>
     <li> <%= link_to product.title, product %> made by <%= link_to product.brand.name, product.brand%> </li>
     <% end %>

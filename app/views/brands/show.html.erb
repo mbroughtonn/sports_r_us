@@ -1,4 +1,4 @@
-<h2><%= @brand.name %></h2>
+<h2 class="title is-3"><%= @brand.name %></h2>
 <ul>
     <% @brand.products.each do |product| %>
         <li><%= link_to product.title, product %></li>
