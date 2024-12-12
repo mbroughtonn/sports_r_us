@@ -1,12 +1,17 @@
+<% content_for(:title) { @brand.name } %>
+
 <h2 class="title is-3"><%= @brand.name %></h2>
 
 <p class="mb-5"><%= @brand.name %> makes <%= @brand.products.count %> or more pieces of sports equipment.</p>
 
 <h3 class="title is-5">Sports equipment made by <%= @brand.name %>:</h3>
-<ol class="ml-5">
-    <% @brand.products.each do |product| %>
-        <li>
-            <%= link_to product.title, product %>
-        </li>
-    <% end %>
-</ol>
+
+<div class="content">
+    <ul class="ml-5">
+        <% @brand.products.each do |product| %>
+            <li>
+                <%= link_to product.title, product %>
+            </li>
+        <% end %>
+    </ul>
+</div>

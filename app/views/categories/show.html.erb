@@ -4,8 +4,12 @@
 
 <p class="mb-5">There are <%= @category.products.count %> pieces of equipment for <%= @category.name %>.</p>
 
-<ul>
-    <% @category.products.each do |product| %>
-        <li><%= link_to product.title, product %></li>
+<div class="content">
+    <ul>
+        <% @category.products.each do |product| %>
+            <li>
+                <%= link_to product.title, product %>
+            </li>
         <% end %>
-</ul>
+    </ul>
+</div>
