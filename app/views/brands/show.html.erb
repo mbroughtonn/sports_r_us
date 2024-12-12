@@ -1,2 +1,6 @@
-<h1>Brands#show</h1>
-<p>Find me in app/views/brands/show.html.erb</p>
+<h2><%= @brand.name %></h2>
+<ul>
+    <% @brand.products.each do |product| %>
+        <li><%= link_to product.title, product %></li>
+        <% end %>
+</ul>
