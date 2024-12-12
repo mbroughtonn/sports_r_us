@@ -1,6 +1,11 @@
 <% content_for(:title) { @product.title } %>
 
 <h2 class="title is-3"><%= @product.title %></h2>
+
+<p>
+    <strong>Category:</strong>
+    <%= link_to @product.category.name, @product.category%>
+</p>
 <p>
     <strong>Brand:</strong>
     <%= link_to @product.brand.name, @product.brand%>
@@ -16,8 +21,4 @@
 <p>
     <strong>Quantity In Stock:</strong>
     <%= @product.stock_quantity%>
-</p>
-<p>
-    <strong>Category:</strong>
-    <%= link_to @product.category.name, @product.category%>
 </p>
