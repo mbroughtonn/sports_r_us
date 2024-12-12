@@ -1,9 +1,9 @@
 <% content_for(:title) { "Brands" } %>
 
 <h2 class="title is-3">Brands</h2>
-<p class="mb-5">
-    These are some of the brands that make sports equipment.
-</p>
+
+<p class="mb-5">There are <%= @brands.count %> or more brands that make sports equipment.</p>
+
 <ol class="ml-5">
     <% @brands.each do |brand| %>
     <li> <%= link_to brand.name, brand %> </li>

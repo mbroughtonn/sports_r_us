@@ -1,4 +1,9 @@
+<% content_for(:title) { @category.name } %>
+
 <h2 class="title is-3"><%= @category.name %></h2>
+
+<p class="mb-5">There are <%= @category.products.count %> pieces of equipment for <%= @category.name %>.</p>
+
 <ul>
     <% @category.products.each do |product| %>
         <li><%= link_to product.title, product %></li>
