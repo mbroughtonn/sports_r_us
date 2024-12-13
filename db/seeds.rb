@@ -3,6 +3,7 @@ require "csv"
 Product.delete_all
 Brand.delete_all
 Category.delete_all
+Page.delete_all
 
 filename = Rails.root.join("db", "sports_equipment.csv")
 puts "Loading data from this file: #{filename}"
@@ -34,6 +35,10 @@ products.each do |product|
   end
 end
 
+Page.create(title: "About Us", content: "This is our about page. All about sports equipment products!", permalink: "about_us")
+Page.create(title: "Contact Us", content: "Contact me at mbroughton@rrc.ca", permalink: "contact_us")
+
 puts "There are #{Product.count} Products."
 puts "There are #{Brand.count} Brands."
 puts "There are #{Category.count} Categories."
+puts "There are #{Page.count} Pages."
