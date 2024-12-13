@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pages
   root to: "home#index"
   resources :brands, only: [:index, :show]
   resources :categories, only: [:index, :show]
