@@ -4,7 +4,7 @@ class PagesController < ApplicationController
 
   # GET /pages or /pages.json
   def index
-    @page = Page.all
+    @pages = Page.all
   end
 
   def permalink
