@@ -2,12 +2,8 @@
 
 <h2 class="title is-3">Categories</h2>
 
-<p class="mb-5">
-    These are sports and activities that are played and/or done.
-</p>
+<p class="mb-5">These are sports and activities that are played and/or done.</p>
 
 <ol class="ml-5">
-    <% @categories.each do |category| %>
-    <li> <%= link_to category.name, category %> </li>
-    <% end %>
+    <%= render @categories %>
 </ol>

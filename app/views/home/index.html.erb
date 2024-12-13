@@ -6,9 +6,7 @@
             Top Products
         </h3>
         <ol class="ml-5">
-            <% @products.each do |product| %>
-            <li><%= link_to product.title, product %></li>
-            <% end %>
+            <%= render @products %>
         </ol>
         <p class="mt-5">
             <strong><%= link_to "👉 See All Products", products_path %></strong>
@@ -20,9 +18,7 @@
             Top Brands
         </h3>
         <ol class="ml-5">
-            <% @brands.each do |brand| %>
-            <li><%= link_to brand.name, brand %></li>
-            <% end %>
+            <%= render @brands %>
         </ol>
         <p class="mt-5">
             <strong><%= link_to "👉 See All Brands", brands_path %></strong>

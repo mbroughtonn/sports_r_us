@@ -5,7 +5,5 @@
 <p class="mb-5">There are <%= @brands.count %> or more brands that make sports equipment.</p>
 
 <ol class="ml-5">
-    <% @brands.each do |brand| %>
-    <li> <%= link_to brand.name, brand %> </li>
-    <% end %>
+    <%= render @brands %>
 </ol>
