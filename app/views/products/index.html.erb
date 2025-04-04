@@ -3,6 +3,11 @@
 <h2 class="title is-3">Products</h2>
 
 <p class="mb-5">A list of equipment used when playing sports and/or doing activities.</p>
-<ol class="ml-5">
-    <%= render @products %>
+
+<ol class="ml-5" start="<%= (@products.current_page - 1) * @products.limit_value + 1 %>">
+  <%= render @products %>
 </ol>
+
+<div class="mt-5">
+  <%= paginate @products %>
+</div>

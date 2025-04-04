@@ -19,6 +19,8 @@ gem "jbuilder"
 
 gem "bcrypt"
 
+gem "kaminari"
+
 # Active Admin for Admin Dashboard
 gem 'activeadmin'
 
