@@ -2,24 +2,26 @@
 
 <h2 class="title is-3">Search Results</h2>
 
-<% if @query.present? %>
-  <p class="mb-4">Showing results for "<strong><%= @query %></strong>"</p>
+<% if @query.present? || @category_id.present? %>
+  <p class="mb-4">
+    Showing results for 
+    <strong>"<%= @query.presence || 'All Products' %>"</strong>
+    <% if @category_id.present? && selected = Category.find_by(id: @category_id) %>
+      in category <strong><%= selected.name %></strong>
+    <% end %>
+  </p>
 
   <% if @products.any? %>
-    <div>
-      <h3 class="title is-5">Matching Products</h3>
-      <ul class="ml-4">
-        <% @products.each do |product| %>
-          <li>
-            <%= link_to product.title, product_path(product) %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
+    <ul class="ml-4">
+      <% @products.each do |product| %>
+        <li>
+          <%= link_to product.title, product_path(product) %>
+        </li>
+      <% end %>
+    </ul>
   <% else %>
     <p>No products matched your search.</p>
   <% end %>
-
 <% else %>
-  <p>Please enter a search term above.</p>
+  <p>Use the search bar to find products by keyword or category.</p>
 <% end %>

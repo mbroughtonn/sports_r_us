@@ -1,13 +1,20 @@
 class SearchController < ApplicationController
   def index
     @query = params[:q]
+    @category_id = params[:category_id]
 
     if @query.present?
-      @products = Product.includes(:brand, :category).where("title LIKE ?", "%#{@query}%")
+      products = Product.where("LOWER(title) LIKE ? OR LOWER(description) LIKE ?", "%#{@query.downcase}%", "%#{@query.downcase}%")
+
+      if @category_id.present? && @category_id != ""
+        products = products.where(category_id: @category_id)
+      end
+
+      @products = products.includes(:category)
     else
       @products = []
     end
 
-    @products = Kaminari.paginate_array(@products).page(params[:page]).per(10)
+    @categories = Category.all
   end
 end

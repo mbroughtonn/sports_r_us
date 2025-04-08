@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "search", to: "search#index", as: :search
+  get "search", to: "search#index", as: "search"
   resources :pages, except: [:show]
   get "pages/:permalink" => "pages#permalink", as: :pages_permalink
   root to: "home#index"
