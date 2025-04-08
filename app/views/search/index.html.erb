@@ -1,0 +1,25 @@
+<% content_for(:title) { "Search Results" } %>
+
+<h2 class="title is-3">Search Results</h2>
+
+<% if @query.present? %>
+  <p class="mb-4">Showing results for "<strong><%= @query %></strong>"</p>
+
+  <% if @products.any? %>
+    <div>
+      <h3 class="title is-5">Matching Products</h3>
+      <ul class="ml-4">
+        <% @products.each do |product| %>
+          <li>
+            <%= link_to product.title, product_path(product) %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% else %>
+    <p>No products matched your search.</p>
+  <% end %>
+
+<% else %>
+  <p>Please enter a search term above.</p>
+<% end %>
