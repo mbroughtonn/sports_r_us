@@ -1,4 +1,4 @@
-class ProductsController < ApplicationController
+class FrontendProductsController < ApplicationController
   def index
     @products = Product.includes(:brand, :category).page(params[:page]).per(10)
   end

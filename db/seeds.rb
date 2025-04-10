@@ -18,7 +18,7 @@ products.each do |product|
   if brand.valid? && category.valid?
     # Create the product
     new_product = Product.create(
-      title: product["product_name"],
+      name: product["product_name"],  # Use the name field instead of title
       description: product["description"],
       price: product["price"].to_f,  # Ensure it's a float
       stock_quantity: product["stock_quantity"].to_i,  # Ensure it's an integer

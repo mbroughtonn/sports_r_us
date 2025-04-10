@@ -10,7 +10,7 @@
     <ul class="ml-5">
         <% @brand.products.each do |product| %>
             <li>
-                <%= link_to product.title, product %>
+                <%= link_to product.name, product %>
             </li>
         <% end %>
     </ul>

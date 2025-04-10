@@ -15,7 +15,7 @@
     <ul class="ml-4">
       <% @products.each do |product| %>
         <li>
-          <%= link_to product.title, product_path(product) %>
+          <%= link_to product.name, frontend_products_path(product) %>
         </li>
       <% end %>
     </ul>
