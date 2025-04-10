@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   resources :frontend_products, only: [:index, :show]
 
+  # Add the products route
+  resources :products, only: [:show]
+
   root to: "home#index"
 
   get "search", to: "search#index", as: "search"
