@@ -2,7 +2,8 @@ ActiveAdmin.register Product do
   # Permitted parameters for product creation and updates
   permit_params :name, :description, :price, :category_id, :brand_id, :image
 
-  # You can add additional configurations or actions if needed
+  # Disable pagination to show all products
+  config.per_page = Product.count  # Display all products
 
   # Example: Configure the index view
   index do
