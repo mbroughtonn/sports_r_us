@@ -42,3 +42,4 @@ puts "There are #{Product.count} Products."
 puts "There are #{Brand.count} Brands."
 puts "There are #{Category.count} Categories."
 puts "There are #{Page.count} Pages."
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
