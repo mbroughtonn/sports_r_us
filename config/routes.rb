@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   resources :frontend_products, only: [:index, :show]
-
-  # Add the products route
   resources :products, only: [:show]
 
   root to: "home#index"
@@ -13,6 +11,8 @@ Rails.application.routes.draw do
   resources :pages, except: [:show]
   get "pages/:permalink" => "pages#permalink", as: :pages_permalink
   resources :brands, only: [:index, :show]
-  resources :categories, only: [:index, :show]
+  
+  resources :categories, only: [:index, :show, :new, :create, :edit, :update]
+  
   get "up" => "rails/health#show", as: :rails_health_check
 end

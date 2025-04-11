@@ -8,5 +8,18 @@ ActiveAdmin.register_page "Dashboard" do
         small I18n.t("active_admin.dashboard_welcome.call_to_action")
       end
     end
+
+    # Add a section with a clickable link to Categories
+    div class: "dashboard-links" do
+      h3 "Quick Links"
+      ul do
+        li do
+          link_to 'Manage Products', admin_products_path
+        end
+        li do
+          link_to 'Manage Categories', admin_categories_path  # Correct path helper
+        end
+      end
+    end
   end
 end
