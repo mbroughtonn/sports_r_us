@@ -25,6 +25,11 @@
     <%= form.number_field :price, class: 'form-control' %>
   </div>
 
+    <div class="form-group">
+    <%= form.label :stock_quantity %>
+    <%= form.text_area :stock_quantity, class: 'form-control' %>
+  </div>
+
   <div class="form-group">
     <%= form.label :category_id, 'Category' %>
     <%= form.collection_select :category_id, Category.all, :id, :name, { prompt: 'Select a Category' }, class: 'form-control' %>
