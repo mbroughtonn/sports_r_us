@@ -16,14 +16,13 @@ products.each do |product|
   category = Category.find_or_create_by(name: product["category_name"])
 
   if brand.valid? && category.valid?
-    # Create the product
     new_product = Product.create(
-      name: product["product_name"],  # Use the name field instead of title
+      name: product["product_name"],
       description: product["description"],
-      price: product["price"].to_f,  # Ensure it's a float
-      stock_quantity: product["stock_quantity"].to_i,  # Ensure it's an integer
-      brand: brand,  # Assign the brand association
-      category: category # Assign the category association
+      price: product["price"].to_f,
+      stock_quantity: product["stock_quantity"].to_i,
+      brand: brand,
+      category: category
     )
 
     if new_product.errors.any?

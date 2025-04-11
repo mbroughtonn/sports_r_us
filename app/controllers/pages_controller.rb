@@ -2,7 +2,6 @@ class PagesController < ApplicationController
   before_action :set_page, only: %i[ edit update destroy ]
   http_basic_authenticate_with name: "admin", password: "notsecure", except: [:permalink]
 
-  # GET /pages or /pages.json
   def index
     @pages = Page.all
   end
@@ -16,16 +15,13 @@ class PagesController < ApplicationController
     end
   end
 
-  # GET /pages/new
   def new
     @page = Page.new
   end
 
-  # GET /pages/1/edit
   def edit
   end
 
-  # POST /pages or /pages.json
   def create
     @page = Page.new(page_params)
 
@@ -40,7 +36,6 @@ class PagesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /pages/1 or /pages/1.json
   def update
     respond_to do |format|
       if @page.update(page_params)
@@ -53,7 +48,6 @@ class PagesController < ApplicationController
     end
   end
 
-  # DELETE /pages/1 or /pages/1.json
   def destroy
     @page.destroy!
 
@@ -64,12 +58,10 @@ class PagesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
   def set_page
     @page = Page.find(params[:id])
   end
 
-    # Only allow a list of trusted parameters through.
   def page_params
     params.require(:page).permit(:title, :content, :permalink)
   end

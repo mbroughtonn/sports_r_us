@@ -1,22 +1,18 @@
 class Admin::ProductsController < ApplicationController
-  before_action :authenticate_admin_user!  # Ensures only authenticated admin can access
+  before_action :authenticate_admin_user!
 
-  # List all products
   def index
     @products = Product.all
   end
 
-  # Show details of a specific product
   def show
     @product = Product.find(params[:id])
   end
 
-  # New product form
   def new
     @product = Product.new
   end
 
-  # Create a new product
   def create
     @product = Product.new(product_params)
     if @product.save
@@ -26,12 +22,10 @@ class Admin::ProductsController < ApplicationController
     end
   end
 
-  # Edit an existing product
   def edit
     @product = Product.find(params[:id])
   end
 
-  # Update an existing product
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
@@ -41,7 +35,6 @@ class Admin::ProductsController < ApplicationController
     end
   end
 
-  # Delete a product
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
@@ -50,7 +43,6 @@ class Admin::ProductsController < ApplicationController
 
   private
 
-  # Strong parameters to allow specific attributes to be updated
   def product_params
     params.require(:product).permit(:name, :description, :price, :category_id, :brand_id, :image)
   end
