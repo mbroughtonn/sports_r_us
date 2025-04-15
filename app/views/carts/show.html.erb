@@ -1,0 +1,54 @@
+<h1 class="title is-3">Your Cart</h1>
+
+<% if @cart.empty? %>
+  <p>Your cart is empty.</p>
+<% else %>
+  <table class="table is-striped is-hoverable is-fullwidth">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Subtotal</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @cart.items.each do |item| %>
+        <tr>
+          <td>
+            <div class="columns is-mobile">
+              <div class="column is-4">
+                <strong><%= item[:product].name %></strong>
+              </div>
+            </div>
+          </td>
+          <td>
+            <%= form_with(url: cart_item_path(item[:product]), method: :patch, local: true) do %>
+              <div class="field has-addons">
+                <div class="control">
+                  <input type="number" name="quantity" class="input is-small" value="<%= item[:quantity] %>" min="1" max="<%= item[:product].stock_quantity %>">
+                </div>
+                <div class="control">
+                  <%= submit_tag "Update", class: "button is-info is-small" %>
+                </div>
+              </div>
+            <% end %>
+          </td>
+          <td><%= number_to_currency(item[:product].price) %></td>
+          <td><%= number_to_currency(item[:product].price * item[:quantity]) %></td>
+          <td>
+            <%= button_to "Remove", cart_item_path(item[:product]), method: :delete, class: "button is-danger is-small" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <div class="columns is-mobile is-vcentered">
+    <div class="column is-offset-9 is-narrow">
+      <h3 class="title is-4">Total: <%= number_to_currency(@cart.total_price) %></h3>
+    </div>
+  </div>
+
+<% end %>

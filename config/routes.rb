@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  get "cart_items/create"
+  get "cart_items/destroy"
+  get "carts/show"
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
   resources :frontend_products, only: [:index, :show]
   resources :products, only: [:show]
+  resource :cart, only: [:show]
+  resources :cart_items, only: [:create, :destroy, :update]
+
 
   root to: "home#index"
 

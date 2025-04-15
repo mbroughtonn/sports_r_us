@@ -22,3 +22,10 @@
     <strong>Quantity In Stock:</strong>
     <%= @product.stock_quantity%>
 </p>
+
+<div class="field mt-5">
+  <%= form_with url: cart_items_path, method: :post, local: true do %>
+    <%= hidden_field_tag :product_id, @product.id %>
+    <%= submit_tag "Add to Cart", class: "button is-primary" %>
+  <% end %>
+</div>
