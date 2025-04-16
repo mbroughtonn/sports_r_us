@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "orders/show"
+  get "checkouts/new"
   get "cart_items/create"
   get "cart_items/destroy"
   get "carts/show"
@@ -9,7 +11,8 @@ Rails.application.routes.draw do
   resources :products, only: [:show]
   resource :cart, only: [:show]
   resources :cart_items, only: [:create, :destroy, :update]
-
+  resources :checkouts, only: [:new, :create]
+  resources :orders, only: [:show]
 
   root to: "home#index"
 
