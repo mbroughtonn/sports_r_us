@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_04_16_201445) do
+ActiveRecord::Schema[8.0].define(version: 2025_04_16_214342) do
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
@@ -54,11 +54,11 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_16_201445) do
     t.string "name"
     t.string "email"
     t.text "address"
-    t.string "city"
     t.string "province"
-    t.string "postal_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "city"
+    t.string "postal_code"
   end
 
   create_table "order_items", force: :cascade do |t|
@@ -73,7 +73,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_16_201445) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.integer "user_id"
     t.string "status"
     t.decimal "total_price"
     t.datetime "created_at", null: false

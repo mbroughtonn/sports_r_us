@@ -1,6 +1,6 @@
 <h1 class="title is-3">Checkout</h1>
 
-<%= form_with model: @customer, url: checkouts_path, method: :post, local: true do |f| %>
+<%= form_with model: @customer, url: checkouts_path, method: :post, local: true, data: { turbo: false } do |f| %>
   <div class="field">
     <%= f.label :name, class: "label" %>
     <div class="control">
