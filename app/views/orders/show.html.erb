@@ -1,34 +1,72 @@
-<h1 class="title is-3">Order Summary</h1>
+<h1 class="title is-3 mb-4">Order Summary</h1>
 
-<h2 class="subtitle is-4">Order #<%= @order.id %></h2>
+<h2 class="subtitle is-4 mb-5">Order #<%= @order.id %></h2>
 
-<h3 class="title is-5">Shipping Information</h3>
-<p><strong>Name:</strong> <%= @order.customer.name %></p>
-<p><strong>Address:</strong> <%= @order.customer.address %></p>
-<p><strong>City:</strong> <%= @order.customer.city %></p>
-<p><strong>Province:</strong> <%= @order.customer.province %></p>
-<p><strong>Postal Code:</strong> <%= @order.customer.postal_code %></p>
+<section class="mb-6">
+  <h3 class="title is-5 mb-3">Shipping Information</h3>
+  <p><strong>Name:</strong> <%= @order.customer.name %></p>
+  <p><strong>Address:</strong> <%= @order.customer.address %></p>
+  <p><strong>City:</strong> <%= @order.customer.city %></p>
+  <p><strong>Province:</strong> <%= @order.customer.province %></p>
+  <p><strong>Postal Code:</strong> <%= @order.customer.postal_code %></p>
+</section>
 
-<h3 class="title is-5">Order Details</h3>
-<table class="table is-striped is-hoverable">
-  <thead>
-    <tr>
-      <th>Product</th>
-      <th>Quantity</th>
-      <th>Price</th>
-      <th>Subtotal</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @order.order_items.each do |item| %>
+<section class="mb-6">
+  <h3 class="title is-5 mb-3">Order Details</h3>
+  <table class="table is-striped is-hoverable is-fullwidth mb-4">
+    <thead>
       <tr>
-        <td><%= item.product.name %></td>
-        <td><%= item.quantity %></td>
-        <td><%= number_to_currency(item.price) %></td>
-        <td><%= number_to_currency(item.quantity * item.price) %></td>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Subtotal</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% subtotal = 0 %>
+      <% @order.order_items.each do |item| %>
+        <% line_total = item.quantity * item.price %>
+        <% subtotal += line_total %>
+        <tr>
+          <td><%= item.product.name %></td>
+          <td><%= item.quantity %></td>
+          <td><%= number_to_currency(item.price) %></td>
+          <td><%= number_to_currency(line_total) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>
 
-<h3 class="title is-5">Total Price: <%= number_to_currency(@order.total_price) %></h3>
+<section class="mb-6">
+  <h3 class="title is-5 mb-3">Summary</h3>
+  <p><strong>Subtotal:</strong> <%= number_to_currency(subtotal) %></p>
+
+  <% province = @order.customer.province %>
+  <% gst = pst = hst = 0 %>
+
+  <% case province %>
+  <% when 'MB' %>
+    <% gst = subtotal * 0.05 %>
+    <% pst = subtotal * 0.07 %>
+    <p><strong>GST (5%):</strong> <%= number_to_currency(gst) %></p>
+    <p><strong>PST (7% - Manitoba):</strong> <%= number_to_currency(pst) %></p>
+  <% when 'ON' %>
+    <% hst = subtotal * 0.13 %>
+    <p><strong>HST (13% - Ontario):</strong> <%= number_to_currency(hst) %></p>
+  <% when 'BC' %>
+    <% gst = subtotal * 0.05 %>
+    <% pst = subtotal * 0.07 %>
+    <p><strong>GST (5%):</strong> <%= number_to_currency(gst) %></p>
+    <p><strong>PST (7% - British Columbia):</strong> <%= number_to_currency(pst) %></p>
+  <% when 'AB' %>
+    <% gst = subtotal * 0.05 %>
+    <p><strong>GST (5% - Alberta):</strong> <%= number_to_currency(gst) %></p>
+  <% else %>
+    <% gst = subtotal * 0.05 %>
+    <p><strong>GST (5%):</strong> <%= number_to_currency(gst) %></p>
+  <% end %>
+
+  <% total = subtotal + gst + pst + hst %>
+  <p class="has-text-weight-bold mt-4"><strong>Total Price:</strong> <%= number_to_currency(total) %></p>
+</section>
