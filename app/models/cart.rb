@@ -1,31 +1,26 @@
 class Cart
   def initialize(session)
     @session = session
-    @session[:cart] ||= {}
+    @cart = @session[:cart] ||= {}
   end
 
   def add_product(product_id)
     product_id = product_id.to_s
-    @session[:cart][product_id] ||= 0
-    @session[:cart][product_id] += 1
+    @cart[product_id] ||= 0
+    @cart[product_id] += 1
   end
 
   def remove_product(product_id)
-    product_id = product_id.to_s
-    @session[:cart].delete(product_id)
+    @cart.delete(product_id.to_s)
   end
 
   def update_product_quantity(product_id, quantity)
-    product_id = product_id.to_s
-    if @session[:cart].key?(product_id) && quantity > 0
-      @session[:cart][product_id] = quantity
-    end
+    @cart[product_id.to_s] = quantity if @cart.key?(product_id.to_s) && quantity > 0
   end
 
   def items
-    Product.find(@session[:cart].keys).map do |product|
-      quantity = @session[:cart][product.id.to_s]
-      { product: product, quantity: quantity }
+    Product.find(@cart.keys).map do |product|
+      { product: product, quantity: @cart[product.id.to_s] }
     end
   end
 
@@ -34,10 +29,10 @@ class Cart
   end
 
   def empty?
-    @session[:cart].empty?
+    @cart.empty?
   end
 
   def clear
-    @session[:cart] = {}
+    @cart.clear
   end
 end
