@@ -9,7 +9,6 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
-    # Add a section with a clickable link to Categories
     div class: "dashboard-links" do
       h3 "Quick Links"
       ul do
@@ -17,7 +16,7 @@ ActiveAdmin.register_page "Dashboard" do
           link_to 'Manage Products', admin_products_path
         end
         li do
-          link_to 'Manage Categories', admin_categories_path  # Correct path helper
+          link_to 'Manage Categories', admin_categories_path
         end
       end
     end
