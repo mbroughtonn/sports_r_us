@@ -21,7 +21,11 @@ Rails.application.routes.draw do
   get "pages/:permalink" => "pages#permalink", as: :pages_permalink
   resources :brands, only: [:index, :show]
   
-  resources :categories, only: [:index, :show, :new, :create, :edit, :update]
-  
+  resources :categories, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+
+  namespace :admin do
+    resources :categories
+  end
+
   get "up" => "rails/health#show", as: :rails_health_check
 end

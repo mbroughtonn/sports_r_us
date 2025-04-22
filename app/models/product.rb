@@ -9,4 +9,8 @@ class Product < ApplicationRecord
   validates :stock_quantity, presence: true
   validates :category, presence: true
   validates :brand, presence: true
+
+  def self.ransackable_associations(auth_object = nil)
+    ["category"]
+  end
 end

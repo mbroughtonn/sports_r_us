@@ -1,6 +1,9 @@
 ActiveAdmin.register Product do
   permit_params :name, :description, :price, :stock_quantity, :category_id, :brand_id, :image
 
+  filter :category, as: :select, collection: Category.all.pluck(:name, :id)
+  filter :brand, as: :select, collection: Brand.all.pluck(:name, :id)
+
   index do
     selectable_column
     id_column
@@ -19,8 +22,8 @@ ActiveAdmin.register Product do
       f.input :description
       f.input :price
       f.input :stock_quantity
-      f.input :category
-      f.input :brand
+      f.input :category, as: :select, collection: Category.all
+      f.input :brand, as: :select, collection: Brand.all
       f.input :image, as: :file
     end
     f.actions

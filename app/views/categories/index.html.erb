@@ -1,16 +1,12 @@
-<% content_for(:title) { "Categories" } %>
+<% content_for(:title) { "Sports" } %>
 
-<h2 class="title is-3">Categories</h2>
+<h2 class="title is-3">Sports</h2>
 
 <p class="mb-5">These are sports and activities that are played and/or done.</p>
 
-<%= link_to 'New Category', new_category_path, class: 'btn btn-primary' %>
-
 <ol class="ml-5">
     <% @categories.each do |category| %>
-        <li><%= link_to category.name, category_path(category) %> |
-            <%= link_to 'Edit', edit_category_path(category) %> |
-            <%= link_to 'Delete', category_path(category), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <li><%= link_to category.name, category_path(category) %>
         </li>
     <% end %>
 </ol>
