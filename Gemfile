@@ -21,8 +21,9 @@ gem "bcrypt"
 
 gem "kaminari"
 
-# Active Admin for Admin Dashboard
-gem 'activeadmin'
+gem "activeadmin"
+
+gem "stripe"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
