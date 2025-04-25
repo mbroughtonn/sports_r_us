@@ -1,6 +1,8 @@
 ActiveAdmin.register Order do
   permit_params :customer_id, :status, :total_price, :stripe_payment_id, :payment_intent_id, :paid
 
+  config.batch_actions = false
+
   index do
     selectable_column
     id_column
@@ -12,9 +14,6 @@ ActiveAdmin.register Order do
     actions
   end
 
-  filter :customer
-  filter :status
-  filter :paid
   filter :created_at
 
   form do |f|
