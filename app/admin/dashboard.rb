@@ -18,6 +18,9 @@ ActiveAdmin.register_page "Dashboard" do
         li do
           link_to 'Manage Categories', admin_categories_path
         end
+        li do
+          link_to 'Manage Orders', admin_orders_path
+        end
       end
     end
   end

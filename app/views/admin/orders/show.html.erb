@@ -1,0 +1,18 @@
+<h1>Order #<%= @order.id %></h1>
+
+<p><strong>Customer:</strong> <%= @order.customer.first_name %> <%= @order.customer.last_name %></p>
+<p><strong>Status:</strong> <%= @order.status %></p>
+<p><strong>Created At:</strong> <%= @order.created_at.strftime("%B %d, %Y") %></p>
+
+<h3>Items Ordered:</h3>
+<ul>
+  <% @order.order_items.each do |item| %>
+    <li><%= item.product.name %> - <%= item.quantity %> x $<%= '%.2f' % item.price %> = $<%= '%.2f' % (item.quantity * item.price) %></li>
+  <% end %>
+</ul>
+
+<h3>Taxes:</h3>
+<p><strong>Tax:</strong> <%= @order.formatted_tax %></p>
+<p><strong>Total:</strong> $<%= '%.2f' % @order.total_price %></p>
+
+<%= link_to 'Back to Orders', admin_orders_path %>
