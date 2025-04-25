@@ -1,34 +1,46 @@
 Rails.application.routes.draw do
-  get "orders/show"
-  get "checkouts/new"
-  post "checkouts/create"
-  get "checkouts/success", to: "checkouts#success", as: "checkout_success"
-  get "checkouts/cancel", to: "checkouts#cancel", as: "checkout_cancel"
-  get "cart_items/create"
-  get "cart_items/destroy"
-  get "carts/show"
+  # Devise and ActiveAdmin
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  resources :frontend_products, only: [:index, :show]
-  resources :products, only: [:show]
-  resource :cart, only: [:show]
-  resources :cart_items, only: [:create, :destroy, :update]
-  resources :checkouts, only: [:new, :create]
-  resources :orders, only: [:show]
-
+  # Root
   root to: "home#index"
 
-  get "search", to: "search#index", as: "search"
-  resources :pages, except: [:show]
-  get "pages/:permalink" => "pages#permalink", as: :pages_permalink
-  resources :brands, only: [:index, :show]
-  
-  resources :categories, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  # Checkout & Stripe
+  resources :checkouts, only: [:new, :create] do
+    collection do
+      get "success", to: "checkouts#success", as: :success
+      get "cancel", to: "checkouts#cancel", as: :cancel
+    end
+  end
 
+  # Orders
+  resources :orders, only: [:show]
+
+  # Cart & Items
+  resource :cart, only: [:show]
+  resources :cart_items, only: [:create, :destroy, :update]
+
+  # Product browsing
+  resources :frontend_products, only: [:index, :show]
+  resources :products, only: [:show]
+
+  # Categories (Frontend & Admin namespace)
+  resources :categories, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   namespace :admin do
     resources :categories
   end
 
-  get "up" => "rails/health#show", as: :rails_health_check
+  # Pages & Permalinks
+  resources :pages, except: [:show]
+  get "pages/:permalink", to: "pages#permalink", as: :pages_permalink
+
+  # Brands
+  resources :brands, only: [:index, :show]
+
+  # Search
+  get "search", to: "search#index", as: "search"
+
+  # Health check
+  get "up", to: "rails/health#show", as: :rails_health_check
 end
