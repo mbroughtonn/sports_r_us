@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   get "orders/show"
   get "checkouts/new"
+  post "checkouts/create"
+  get "checkouts/success", to: "checkouts#success", as: "checkout_success"
+  get "checkouts/cancel", to: "checkouts#cancel", as: "checkout_cancel"
   get "cart_items/create"
   get "cart_items/destroy"
   get "carts/show"
