@@ -16,7 +16,7 @@ ActiveAdmin.register_page "Dashboard" do
           link_to 'Manage Products', admin_products_path
         end
         li do
-          link_to 'Manage Categories', admin_categories_path
+          link_to 'Manage Categories (Sports)', admin_categories_path
         end
         li do
           link_to 'Manage Orders', admin_orders_path
