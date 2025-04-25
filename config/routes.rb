@@ -7,12 +7,9 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   # Checkout & Stripe
-  resources :checkouts, only: [:new, :create] do
-    collection do
-      get "success", to: "checkouts#success", as: :success
-      get "cancel", to: "checkouts#cancel", as: :cancel
-    end
-  end
+  resources :checkouts, only: [:new, :create]
+  get "checkout/success", to: "checkouts#success", as: :checkout_success
+  get "checkout/cancel", to: "checkouts#cancel", as: :checkout_cancel
 
   # Orders
   resources :orders, only: [:show]

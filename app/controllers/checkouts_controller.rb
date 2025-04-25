@@ -39,6 +39,7 @@ class CheckoutsController < ApplicationController
       )
     end
 
+    # Create Stripe Checkout Session
     stripe_session = Stripe::Checkout::Session.create(
       payment_method_types: ["card"],
       success_url: checkout_success_url + "?session_id={CHECKOUT_SESSION_ID}",
@@ -56,21 +57,25 @@ class CheckoutsController < ApplicationController
           },
           quantity: item[:quantity]
         }
-      end
+      end,
+      metadata: {
+        order_id: order.id
+      }
     )
 
     order.update!(stripe_payment_id: stripe_session.id)
     @cart.clear
 
+    # Redirect user to Stripe
     redirect_to stripe_session.url, allow_other_host: true
   end
 
   def success
-    session = Stripe::Checkout::Session.retrieve(params[:session_id])
-    order = Order.find_by(stripe_payment_id: session.id)
+    session_data = Stripe::Checkout::Session.retrieve(params[:session_id])
+    order = Order.find_by(stripe_payment_id: session_data.id)
 
     if order
-      order.update(paid: true)
+      order.update(paid: true, status: "paid")
       flash[:notice] = "Payment successful! Order ##{order.id} is now paid."
       redirect_to order_path(order)
     else
